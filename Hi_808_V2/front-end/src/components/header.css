@@ -1,15 +1,20 @@
 header {
-    padding: 0 50px;
-    height: 100px;
+    margin: 0;
+    padding: 1vw 0;
+    width: auto;
+    height: 5vw;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+
+    background: var(--background-color);
 }
-.userLoginBox {
-    display: flex;
-    align-items: center;
-}
-.userLoginBox .loading {
-    margin: 0 50px;
+.mainLogo {
+    position: absolute;
+    margin: 0;
+    border: 0;
+    border-radius: 100%;
+    padding: 0;
+    width: 4vw;
 }

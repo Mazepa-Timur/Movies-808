@@ -1,20 +1,48 @@
+.darkTheme {
+  /* --user-color: #1889C8; */
+  --text-color: #ffffff;
+  --background-color: #1a1a1a;
+  --ultra-theme-color: #111111;
+  --normal-theme-color: #3E3E3E;
+  --medium-theme-color: #202020;
+}
+.lightTheme {
+  /* --user-color: #1889C8; */
+  --text-color: #000000;
+  --background-color: #ffffff;
+  --ultra-theme-color: #e7e7e7;
+  --normal-theme-color: #d8d8d8;
+  --medium-theme-color: #ededed;
+}
 * {
-    margin: 0;
-    padding: 0;
-    color: var(--text-color);
-    text-decoration: none;
-    font-family: sans-serif;
-    font-weight: 600;
-    border: none;
+  margin: 0;
+  padding: 0;
+
+  font-family: sans-serif;
+  text-decoration: none;
+  color: var(--text-color);
 }
-.app {
-    background-color: var(--main-bg-color);
+*::-webkit-scrollbar {
+  width: 15px;
 }
-* option {
-    bottom: 0;
+*::-webkit-scrollbar-track {
+  background-color: var(--background-color, black);
 }
-.boxCenter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+*::-webkit-scrollbar-thumb {
+  background-color: var(--normal-theme-color);
+}
+
+img,
+.App > header {
+  user-select: none;
+}
+body {
+  background-color: var(--background-color, #fff);
+}
+input:focus {
+  outline: none;
+}
+.App {
+  min-height: 100vh;
+  background-color: var(--background-color, #fff);
 }

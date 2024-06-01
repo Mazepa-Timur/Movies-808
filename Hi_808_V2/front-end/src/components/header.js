@@ -1,26 +1,33 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useState } from 'react';
+import { createPortal } from 'react-dom';
+
 import './header.css';
 
-import Login from './header/login.js';
-import User from './header/user.js';
-import ButtonTheme from './header/ButtonTheme';
+import logo from '../image/808.jpg';
+import Navigator from '../items/navigator/navigator';
+import MenuSetting from '../items/menuSetting/menuSetting';
 
 const Header = () => {
-  const isLogin = useSelector((state) => state.activity.isLogin);
-
+  const [showMenu, setShowMenu] = useState(false);
+  if (showMenu) {
+    document.body.style.overflowY = 'hidden';
+    document.body.style.paddingRight = '15px';
+  } else {
+    document.body.style.overflowY = 'scroll';
+    document.body.style.paddingRight = '0px';
+  }
   return (
     <header>
-      <div>Home</div>
-
-      {/* <Navigation /> */}
-
-      <div className="userLoginBox">
-        <ButtonTheme />
-        {isLogin === 'user' && <User />}
-        {isLogin === 'login' && <Login />}
-        {!isLogin && <p className='loading'>Loading...</p>}
-      </div>
+      <img className="mainLogo"
+        onClick={() => setShowMenu(true)}
+        src={logo}
+        alt="logo"
+        width={'50px'} />
+      <Navigator />
+      {showMenu && createPortal(
+          <MenuSetting show={setShowMenu} />,
+          document.querySelector('.App')
+        )}
     </header>
   );
 };
