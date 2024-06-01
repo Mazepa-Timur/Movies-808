@@ -1,0 +1,15 @@
+Create films
+http://localhost:8008/film/createNewFilm
+name = New Movis
+description = bla bla
+genre = jojo&year=2077
+age = 12
+
+Forgot password 
+http://localhost:8008/user/forgotPassword
+email = email@gmail.com
+
+Change password
+http://localhost:8008/user/changePassword
+token = action_token
+password = new password

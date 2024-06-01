@@ -1,0 +1,15 @@
+.userLogin {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.userSing {
+  width: 1000px;
+  height: 500px;
+  border-radius: 10px;
+
+  display: flex;
+  overflow: hidden;
+
+  background-color: var(--medium-theme-color);
+}

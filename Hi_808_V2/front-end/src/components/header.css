@@ -1,0 +1,15 @@
+header {
+    padding: 0 50px;
+    height: 100px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.userLoginBox {
+    display: flex;
+    align-items: center;
+}
+.userLoginBox .loading {
+    margin: 0 50px;
+}

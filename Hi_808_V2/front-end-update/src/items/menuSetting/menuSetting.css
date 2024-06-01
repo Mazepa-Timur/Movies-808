@@ -1,0 +1,54 @@
+.menuSetting {
+
+    margin: 0;
+    border-radius: 10px;
+    padding: 20px 0px;
+    width: min-content;
+    height: min-content;
+
+    display: flex;
+    gap: 0px;
+    flex-direction: column;
+    align-items: center;
+    
+    background-color: var(--ultra-theme-color, #141414);
+}
+.menuSetting::after {
+    content: '';
+    position: absolute;
+    transform: rotate(45deg) translateY(-20px) translateX(-20px);
+    width: 30px;
+    height: 30px;
+
+    background-color: var(--ultra-theme-color, #141414);
+}
+.menuSetting p, .menuSetting a {
+    z-index: 1;
+    margin: 0;
+    padding: 20px 0;
+    width: 16vw;
+    height: auto;
+
+    user-select: none;
+    text-align: center;
+    align-items: center;
+
+    font-size: 1.2rem;
+    color: var(--text-color, #000000);
+}
+.menuSetting p:hover, .menuSetting a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 7vw;
+    width: 99vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: transparent;
+}

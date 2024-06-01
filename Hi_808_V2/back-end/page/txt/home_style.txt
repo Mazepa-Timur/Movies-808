@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap%27');
+* {
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Poppins', sans-serif;
+    /* font-family: sans-serif; */
+}
+
+body {
+    background-color: #1d1c1c;
+    /* background-image: url('https://www.whats-on-netflix.com/wp-content/uploads/2022/09/when-will-jojos-bizzare-adventure-stone-ocen-episodes-25-38-be-on-netflix.jpeg'); */
+    background-size: cover;
+}
+
+.head {
+    background-color: #313131;
+    
+    border: 3px solid red;
+    border-radius: 15px;
+}
+.head li{
+    font-size: 18px;
+
+}
+.style-glass * {
+    backdrop-filter: blur(15px);
+}
+.style-glass-1 {
+    background-color: rgba(255, 0, 0, 0.5);
+}
+.style-glass-2 {
+    background-color: rgba(119, 0, 255, 0.5);
+}
+.style-glass-3 {
+    background-color: rgba(208, 255, 0, 0.5);
+}
+.style-glass-4 {
+    background-color: rgba(255, 0, 204, 0.5);
+}

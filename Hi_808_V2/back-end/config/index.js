@@ -1,0 +1,8 @@
+module.exports = {
+  NO_REPLY_EMAIL: process.env.NO_REPLY_EMAIL || 'email',
+  NO_REPLY_PASS: process.env.NO_REPLY_PASS || 'pass',
+  ACCESS_TOKEN_SECRET: process.env.ACCESS_TOKEN_SECRET || 'ACCESS',
+  REFRESH_TOKEN_SECRET: process.env.REFRESH_TOKEN_SECRET || 'REFRESH',
+  ACTION_TOKEN_FORGOTRASSWORD: process.env.ACTION_TOKEN_FORGOTRASSWORD || 'ACTION',
+  MONGO_URL: process.env.MONGO_URL
+};

@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: 600;
+    border: none;
+}
+.movies {
+    background-color: var(--main-bg-color);
+    min-height: 100vh;
+}
+* option {
+    bottom: 0;
+}
+.boxCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

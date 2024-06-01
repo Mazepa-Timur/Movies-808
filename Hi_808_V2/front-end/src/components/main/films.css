@@ -1,0 +1,13 @@
+.filmsBox {
+    padding: 30px 40px;
+    
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 250px);
+    gap: 20px;
+}
+.itemsNotFound {
+    margin: 100px;
+    text-align: center;
+    color: var(--text-color);
+}

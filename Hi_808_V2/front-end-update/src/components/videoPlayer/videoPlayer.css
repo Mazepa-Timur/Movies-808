@@ -1,0 +1,62 @@
+/* .videoPlayer {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #333;
+}
+
+.videoPlayer video {
+  width: 100%;
+  max-width: 800px;
+  border: 1px solid #555;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.videoPlayer video:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.videoPlayer .controls {
+  display: flex;
+  justify-content: space-between;
+  background-color: #222;
+  padding: 10px;
+  border-radius: 0 0 10px 10px;
+}
+
+.videoPlayer .controls button {
+  background-color: #444;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  margin: 0;
+  cursor: pointer;
+  border-radius: 5px;
+} */
+
+.videoPlayer {
+  margin: 0;
+  padding: 0;
+
+  height: 700px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.videoPlayer iframe {
+  padding: 10px;
+
+  width: 800px;
+  height: 420px;
+
+  border-radius: 5px;
+
+  background-color: var(--normal-theme-color);
+}

@@ -1,0 +1,45 @@
+.userButtons {
+    padding: 5px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.history {
+    padding: 15px 25px;
+}
+.username {
+    padding: 15px 25px;
+}
+.hideList {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+}
+.listBox {
+    position: absolute;
+    z-index: 4;
+    top: 70px;
+    right: 90px;
+
+    width: 300px;
+    padding: 5px 10px;
+    border-radius: 8px;
+
+    background-color: var(--card-film);
+}
+.listButton {
+    margin: 3px 0px;
+    padding: 10px 10px;
+    border-left: 2px solid var(--user-color);
+    color: var(--text-color);
+}
+.listButton:hover {
+    background-color: var(--main-bg-hover);
+    color: var(--user-color);
+}
