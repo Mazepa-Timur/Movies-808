@@ -5,6 +5,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import StyleCustom from './style';
 
+import { setOAuthAction } from './store/actions/oauthAction';
+
 import ProfilePage from './page/profilePage';
 import Movies from './page/cinema/movies';
 import Series from './page/cinema/Series';
@@ -14,9 +16,9 @@ import About from './page/cinema/About';
 import History from './page/history';
 import Cinema from './page/cinema/cinema';
 import ErrorPage from './page/errorPage';
-import { setOAuthAction } from './store/actions/oauthAction';
 import SearchPage from './page/cinema/searchPage';
 import UserPage from './page/user';
+// import CreateNewFilm from './page/cinema/EditFilm';
 
 const router = createBrowserRouter([
   { path: '/', element: <ErrorPage />, errorElement: <ErrorPage /> },
@@ -31,6 +33,7 @@ const router = createBrowserRouter([
       { path: 'anime', element: <Anime /> },
       { path: 'search', element: <SearchPage /> },
       { path: 'about', element: <About />},
+      // { path: 'createNewFilm', element: <CreateNewFilm />},
     ],
   },
 

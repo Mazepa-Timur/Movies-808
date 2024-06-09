@@ -4,6 +4,7 @@ import { useSearchParams } from 'react-router-dom';
 import { setMediaAction } from '../../store/actions/mediaAction';
 import MovieInfo from '../../components/movieInfo/movieInfo';
 import VideoPlayer from '../../components/videoPlayer/videoPlayer';
+import MovieForm from '../../components/movieForm/movieForm';
 
 const About = () => {
   const [searchParams] = useSearchParams();
@@ -30,13 +31,14 @@ const About = () => {
 
   useEffect(() => {
     if (!data._id) {
-      console.log(data);
       updateMedia();
+      console.log(1, data);
     }
   });
 
   return (
     <React.Fragment>
+      {/* {data._id && <MovieForm data={data} />} */}
       {data._id && <MovieInfo data={data} />}
       {data.video && <VideoPlayer video={data.video} />}
     </React.Fragment>

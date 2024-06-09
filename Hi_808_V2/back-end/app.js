@@ -14,7 +14,10 @@ app.use(express.static(path.join(__dirname, 'page')));
 app.use('*', (req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'GET,HEAD,OPTIONS,POST,PUT');
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
+  res.header(
+    'Access-Control-Allow-Headers',
+    'Origin, X-Requested-With, Content-Type, Accept, Authorization'
+  );
   next();
 });
 app.use('/', apiRouter);
@@ -29,21 +32,22 @@ app.listen(8008, () => {
 });
 _connectDB();
 
-function _connectDB() {mongoose
-  .set('debug', true)
-  .set('strictQuery', true)
-  .connect(MONGO_URL)
-  .then(() => console.log('+ MongoDB success'))
-  .catch((error) => {
-      console.log(error.message);
+function _connectDB() {
+  mongoose
+    .set('debug', true)
+    .set('strictQuery', true)
+    .connect(MONGO_URL)
+    .then(() => console.log('+ MongoDB success'))
+    .catch((error) => {
+      console.log('err', error.message);
       process.exit(1);
-  });
+    });
 }
 function _Error(err, req, res, next) {
   res
     .status(err.static || 500)
     .json({ message: err.message, status: err.status });
   console.log('>-----------------------<');
-  console.log(err);
+  console.log('err', err);
   console.log('>-----------------------<');
 }

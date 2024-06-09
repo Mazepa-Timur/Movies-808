@@ -26,11 +26,11 @@ router.post(
   tokenMiddleware.checkRefreshToken,
   userController.updateTokens
 );
-router.post(
-  '/forgotPassword',
-  userMiddleware.isCheckEmail,
-  userController.createActionToken
-);
+// router.post(
+//   '/forgotPassword',
+//   userMiddleware.isCheckEmail,
+//   userController.createActionToken
+// );
 router.post(
   '/changePassword',
   userMiddleware.passwordValidator,

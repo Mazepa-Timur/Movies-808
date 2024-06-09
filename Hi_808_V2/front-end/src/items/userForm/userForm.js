@@ -7,7 +7,7 @@ import EmailImage from '../../image/emailSvg.svg';
 import PesswordIgame from '../../image/passwordSvg.svg';
 import arrowLogin from '../../image/arrowLogin.svg';
 
-import UserInput from '../userInput/userInput';
+import SimpleInput from '../simpleInput/simpleInput';
 import { setUserAction } from '../../store/actions/userAction';
 
 const UserForm = () => {
@@ -21,8 +21,8 @@ const UserForm = () => {
   };
 
   const handButton = () => {
-    setIsLogin(isLogin === 'login' ? 'register' : 'login')
-  }
+    setIsLogin(isLogin === 'login' ? 'register' : 'login');
+  };
 
   return (
     <form onSubmit={handleSubmit} className="userForm">
@@ -36,16 +36,16 @@ const UserForm = () => {
         {isLogin === 'register' && (
           <label>
             <img src={EmailImage} alt="" />
-            <UserInput type={'text'} name={'name'} placeholder={'name'} />
+            <SimpleInput type={'text'} name={'name'} placeholder={'name'} />
           </label>
         )}
         <label>
           <img src={EmailImage} alt="" />
-          <UserInput type={'text'} name={'email'} placeholder={'email'} />
+          <SimpleInput type={'text'} name={'email'} placeholder={'email'} />
         </label>
         <label>
           <img src={PesswordIgame} alt="" />
-          <UserInput
+          <SimpleInput
             type={'password'}
             name={'password'}
             placeholder={'password'}
@@ -54,7 +54,7 @@ const UserForm = () => {
         {isLogin === 'register' && (
           <label>
             <img src={PesswordIgame} alt="" />
-            <UserInput
+            <SimpleInput
               type={'password'}
               name={'passwordTwo'}
               placeholder={'passwordTwo'}

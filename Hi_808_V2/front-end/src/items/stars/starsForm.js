@@ -8,9 +8,9 @@ const FormStar = (props) => {
   const [isDisabled, setDisabled] = useState(true);
   const nameClass = !isDisabled ? 'star' : '';
   const isLogin = useSelector((state) => state.userStore.isLogin);
-  
+
   if (isLogin && isDisabled) {
-    setDisabled(false)
+    setDisabled(false);
   }
 
   const starArr = [];
@@ -18,7 +18,7 @@ const FormStar = (props) => {
     for (let index = 10; index > 0; index--) {
       starArr.push(
         <InputStar
-        nameClass={nameClass}
+          nameClass={nameClass}
           key={index}
           star={props.star}
           index={index}
@@ -31,7 +31,12 @@ const FormStar = (props) => {
   const rating = async (event) => {
     if (event.target.value) {
       console.log(event.target.value);
-      setMediaAction({ filmId: props.id, points: event.target.value }, 'rating')(dispatch);
+      if (props.id) {
+        setMediaAction(
+          { filmId: props.id, points: event.target.value },
+          'rating'
+        )(dispatch);
+      }
     }
   };
 

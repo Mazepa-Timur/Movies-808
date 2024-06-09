@@ -22,8 +22,9 @@ const MenuSetting = (props) => {
     <div className={`close ${theme}`} onClick={() => props.show(false)}>
       <div className="menuSetting">
         {user.name && <Link to="/profile">Setting</Link>}
+        {/* {user.name && <Link to="/createNewFilm">Create Film</Link>} */}
         <p onClick={changeUserTheme}>{textTheme}</p>
-        <p onClick={resetLogin}>Sign out</p>
+        {user.name && <p onClick={resetLogin}>Sign out</p>}
       </div>
     </div>
   );

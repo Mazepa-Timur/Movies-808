@@ -7,6 +7,7 @@ import FormStar from '../../items/stars/starsForm';
 const MovieInfo = (props) => {
   let genre = '';
   if (props.data.genre) {
+    console.log(props.data);
     for (let i = 0; i < props.data.genre.length; i++) {
       if (i > 0) {
         genre += `, ${props.data.genre[i]}`;

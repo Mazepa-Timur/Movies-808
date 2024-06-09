@@ -3,7 +3,6 @@ const oauthServise = require('../servises/oauthServise');
 const validator = require('../validators/validator');
 const { ACTION_TOKEN_FORGOTRASSWORD } = require('../config/index');
 const ActionServise = require('../servises/actionServise');
-const nodemailer = require('../servises/nodemailerServise');
 
 module.exports = {
   createUser: async (req, res, next) => {
