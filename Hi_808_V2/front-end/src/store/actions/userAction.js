@@ -27,7 +27,7 @@ export const setUserAction = (data, typeForm) => {
         }
 
         if (!errorList.length) {
-          if (!typeForm) {
+          if (typeForm === 'register') {
             const {name, email, password} = data;
             const response = await fetch(
               'http://localhost:8008/user/register',
@@ -40,6 +40,7 @@ export const setUserAction = (data, typeForm) => {
             const res = await response.json();
             if (response.ok) {
               console.log(res);
+              return true
             }
             if (response.status === 500) {
               errorList.push({
@@ -48,7 +49,7 @@ export const setUserAction = (data, typeForm) => {
               });
             }
           }
-          if (typeForm) {
+          if (typeForm === 'login') {
             const response = await fetch('http://localhost:8008/user/login', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },

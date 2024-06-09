@@ -14,10 +14,13 @@ const UserForm = () => {
   const dispatch = useDispatch();
   const [isLogin, setIsLogin] = useState('login');
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = Object.fromEntries(new FormData(event.target).entries());
-    setUserAction(formData, isLogin)(dispatch);
+    const res = await setUserAction(formData, isLogin)(dispatch);
+    if (res) {
+      setIsLogin('login')
+    }
   };
 
   const handButton = () => {

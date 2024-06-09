@@ -4,7 +4,7 @@ import { useSearchParams } from 'react-router-dom';
 import { setMediaAction } from '../../store/actions/mediaAction';
 import MovieInfo from '../../components/movieInfo/movieInfo';
 import VideoPlayer from '../../components/videoPlayer/videoPlayer';
-import MovieForm from '../../components/movieForm/movieForm';
+// import MovieForm from '../../components/movieForm/movieForm';
 
 const About = () => {
   const [searchParams] = useSearchParams();
